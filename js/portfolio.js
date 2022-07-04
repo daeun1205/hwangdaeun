@@ -16,4 +16,18 @@ $(document).ready(function(){
         },300);
     });
 
+    $('.menu_btn').click(function(){
+
+        $('.menu_wrap').fadeIn();
+        $('.menu_btn').fadeOut();
+        $('.hamburger_btn').fadeIn();
+    });
+
+    $('.hamburger_btn').click(function(){
+        $('.menu_wrap').fadeOut();
+        $('.menu_btn').fadeIn();
+        $('.hamburger_btn').fadeOut();
+
+    });
+
 });//end
