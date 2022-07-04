@@ -5,8 +5,69 @@
     transition: 0.5s;
 }
 /* 헤더 */
+label[for=hamburger]{
+    width: 25px;
+    height: 25PX;
+    display: none;
+    position: fixed;
+    right: 81px;
+    top: 38px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 99;
+}
+label[for=hamburger] span{
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: #000;
+    transition: 0.3s;
+}
+label[for=hamburger] span:nth-child(1){
+    top: 50%;
+    transform: rotate(45deg);
+}
+label[for=hamburger] span:nth-child(2){
+    top: 50%;
+    transform: rotate(-45deg);
+}
 .menu_wrap{
     display: none;
+}
+.menu_wrap{
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f3f1ee;
+    line-height: 100px;
+    z-index: 99;
+}
+.menu_box{
+    display: flex;
+    justify-content: end;
+    transition: 0.5s;
+}
+.menu_box li{
+    margin-right: 30px;
+    display:inline-block; 
+    text-transform:uppercase;
+}
+.menu_box li:last-child{
+    margin-right: 180px;
+}
+.menu_box li a::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px #1a1a1e;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.menu_box li a:hover:after { 
+    transform: scaleX(1); 
+    transform-origin: 0% 50%;
 }
 .header{
     /* display: flex;
@@ -39,7 +100,7 @@
     position: fixed;
     top: 40px;
     right: 70px;
-    z-index: 99;
+    z-index: 999;
 }
 /* 배너 */
 .banner{
@@ -52,29 +113,31 @@
     font-weight: 600;
     line-height: 1;
 }
-.banner_left_c div{
-    width: 670px;
-    height: 210px;
-    background-color: #222;
-    margin-top: 20px;
-}
 .banner_left_b{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 160px;
-}
-.banner_left_b_l svg{
-    transform: rotate(180deg);
+    margin-top: 460px;
 }
 .banner_left_b_r p{
     font-size: 20px;
     font-weight: 600;
 }
+.banner_profile{
+    position: absolute;
+    top: 310px;
+    left: 315px;
+    width: 420px;
+    height: 560px;
+}
 .banner_right{
     display: flex;
+    /* flex-direction: column; */
     align-items: end;
     text-align: right;
+}
+.banner_title{
+    margin-top: 20px;
 }
 
 /* 어바웃미 */
@@ -103,7 +166,7 @@
     margin-top: 80px;
 }
 .content_b_l p{
-    font-size: 30px;
+    font-size: 23px;
 }
 .content_b_r_t{
     display: flex;
@@ -176,10 +239,10 @@
     margin-right: 0;
 }
 .img{
-    width: 65px;
+    width: 60px;
     position: relative;
-    top: -95px;
-    left: 13px;
+    top: -92px;
+    left: 15px;
 }
 .shape,circle{
     width: 90px;
@@ -193,32 +256,32 @@
     stroke-dashoffset: 209;
     transform: rotate(-90deg);
     transform-origin: center;
-    animation: htmlcss 1.5s linear forwards;
+    animation: htmlcss 2s linear forwards;
 }
 .java_icon{
     stroke-dasharray: 331;
     stroke-dashoffset: 209;
-    animation: java 1.5s linear forwards;
+    animation: java 2s linear forwards;
 }
 .js_icon{
     stroke-dasharray: 295;
     stroke-dashoffset: 209;
-    animation: js 1.5s linear forwards;
+    animation: js 2s linear forwards;
 }
 .ps_icon,.figma_icon{
     stroke-dasharray: 210;
     stroke-dashoffset: 149;
-    animation: psfig 1.5s linear forwards;
+    animation: psfig 2s linear forwards;
 }
 .ai_icon{
     stroke-dasharray: 190;
     stroke-dashoffset: 129;
-    animation: ai 1.5s linear forwards;
+    animation: ai 2s linear forwards;
 }
 .xd_icon{
     stroke-dasharray: 150;
     stroke-dashoffset: 49;
-    animation: xd 1.5s linear forwards;
+    animation: xd 2s linear forwards;
 }
 .text{
     position: absolute;
@@ -430,7 +493,7 @@
 
 
 
-.project_r a{
+.project_r{
     display: block;
     width: 900px;
     position: absolute;
@@ -501,7 +564,7 @@
     letter-spacing: -6px;
     font-size: 138px;
     font-weight: 600;
-    margin: 110px 0 200px;
+    margin: 130px 0 230px;
     transition: 0.5s;
 }
 .sendmessage span{
@@ -512,7 +575,7 @@
 }
 /* 푸터 */
 footer{
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 .footer{
     display: flex;
@@ -525,11 +588,11 @@ footer{
 
 /* top_but */
 .top_but img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     position: fixed;
-    bottom: 40px;
-    right: 50px;
+    bottom: 60px;
+    right: 70px;
     z-index: 999;
     cursor: pointer;
     animation: video_reel 6.5s linear infinite;
@@ -551,7 +614,7 @@ footer{
     .project_txt3_ti_con{
         font-size: 18px;
     }
-    .project_r a{
+    .project_r{
         width: 800px;
     }
     .box1,.box2,.box3{
@@ -560,8 +623,19 @@ footer{
         top: 40px;
     }
 }
+@media (max-width:1600px){
+    .banner .banner_title p{
+        font-size: 120px;
+    }
+    .banner_profile{
+        top: 290px;
+        left: 245px;
+        width: 400px;
+        height: 530px;
+    }
+}
 @media (max-width:1500px){
-    .project_r a{
+    .project_r{
         width: 700px;
     }
     .box1,.box2,.box3{
@@ -580,6 +654,16 @@ footer{
 
 
 @media (max-width:1400px){
+    /* 배너 */
+    .banner .banner_title p{
+        font-size: 100px;
+    }
+    .banner_profile{
+        top: 300px;
+        left: 200px;
+        width: 350px;
+        height: 470px;
+    }
     /* aboutme */
     .content{
         width: 1000px;
@@ -617,12 +701,10 @@ footer{
         margin-top: 70px;
     }
     .project_r{
-        margin-top: 100px;
-    }
-    .project_r a{
         width: unset;
         position: unset;
         transform: unset;
+        margin-top: 100px;
     }
     .box1, .box2, .box3{
         display: none;
@@ -654,6 +736,27 @@ footer{
 
 
 @media (max-width:1200px){
+    /* 배너 */
+    .banner{
+        display: block;
+        padding-top: unset;
+    }
+    .banner .banner_title p{
+        font-size: 85px;
+    }
+    .banner_profile{
+        top: 290px;
+        left: 70px;
+        width: 400px;
+        height: 530px;
+    }
+    .banner_left_b{
+        flex-direction: row-reverse;
+        margin-top: 540px;
+    }
+    .banner_right{
+        text-align: unset;
+    }
     /* 헤더 */
     .portfolio{
         left: 350px;
@@ -698,6 +801,15 @@ footer{
     .wrap{
         padding: 0 30px;
     }
+    /* 배너 */
+    .banner_profile{
+        top: 290px;
+        left: 30px;
+        width: 400px;
+    }
+    .banner_left_b_l{
+        width: 60px;
+    }
     /* 헤더 */
     .header{
         font-size: 18px;
@@ -720,7 +832,16 @@ footer{
     .second_grid{
         display: none;
     }
+    label[for=hamburger]{
+        right: 40px;
+    }
+    .menu_box li:last-child{
+        margin-right: 130px;
+    }
     /* aboutme */
+    .content_t{
+        font-size: 32px;
+    }
     .content_b{
         display: block;
     }
@@ -733,6 +854,7 @@ footer{
     .progress{
         justify-content: space-evenly;
         height: 150px;
+        margin-right: 0;
     }
     .content_b_r_t dl dd{
         font-size: 20px;
@@ -762,6 +884,9 @@ footer{
     .project_txt4, .project_txt5, .project_txt6{
         font-size: 17px;
     }
+    .project_txt5, .project_txt6{
+        margin-top: 8px;
+    }
     /* uiux */
     .uiux_r{
         width: 100%;
@@ -785,11 +910,28 @@ footer{
     .wrap{
         padding: 0 10px;
     }
+    /* 배너 */
+    .banner .banner_title p{
+        font-size: 70px;
+    }
+    .banner_profile{
+        top: 265px;
+        left: 10px;
+        width: 330px;
+        height: 440px;
+    }
+    .banner_left_b{
+        margin-top: 460px;
+    }
+    .banner_left_b_l{
+        width: 50px;
+    }
+    /* 헤더 */
     .name{
         left: 10px;
     }
     .portfolio{
-        left: 250px;
+        display: none;
     }
     .menu{
         right: 10px;
@@ -800,6 +942,39 @@ footer{
     .first_grid{
         font-size: 18px;
         margin-left: 150px;
+    }
+    label[for=hamburger] {
+        right: 20px;
+    }
+    .menu_box li:last-child {
+        margin-right: 100px;
+    }
+    /* aboutme */
+    .content_t{
+        font-size: 28px;
+    }
+    /* aboutme */
+    .content_b_r_t .pro{
+        width: 220px;
+        margin-right: 10px;    
+    }
+    .content_b_r_t dl dt, .skills{
+        font-size: 26px;
+    }
+    .content_b_r_t dl dd{
+        font-size: 18px;
+    }
+    .pro p, .edu p{
+        font-size: 14px;
+    }
+    .content_b_r_t dl dd.line::after{
+        height: 56px;
+    }
+    .progress{
+        height: 140px;
+    }
+    .svg-wrapper{
+        margin-right: 5px;
     }
     /* 푸터 */
     .sendmessage{
@@ -818,9 +993,47 @@ footer{
     .footer_social{
         margin-top: 30px;
     }
+    /* 탑버튼 */
+    /* .top_but img{
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 30px;
+    } */
 }
 
 @media (max-width:500px){
+    /* 배너 */
+    .banner .banner_title p{
+        font-size: 50px;
+    }
+    .banner_profile{
+        top: 225px;
+        left: 10px;
+        width: 260px;
+        height: 350px;
+    }
+    .banner_left_b{
+        margin-top: 370px;
+    }
+    .banner_left_b_l{
+        width: 30px;
+    }
+    /* aboutme */
+    .content_t{
+        font-size: 26px;
+    }
+    .content_b_r_t{
+        display: block;
+    }
+    .content_b_r_t .pro{
+        width: unset;
+        margin-right: 0;
+    }
+    .content_b_r_t .edu{
+        margin-top: 50px;
+    }
+    /* renewal */
     .project_title{
         width: 250px;
     }
@@ -857,5 +1070,10 @@ footer{
         font-size: 14px;
         border-radius: 14px;
         padding: 9px 15px;
+    }
+    /* 푸터 */
+    .sendmessage{
+        font-size: 39px;
+        letter-spacing: 0px;
     }
 }
