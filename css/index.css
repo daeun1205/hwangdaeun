@@ -7,7 +7,7 @@
 /* 헤더 */
 label[for=hamburger]{
     width: 25px;
-    height: 25PX;
+    height: 25px;
     display: none;
     position: fixed;
     right: 81px;
@@ -832,6 +832,9 @@ footer{
     .second_grid{
         display: none;
     }
+    .menu_box li{
+        font-size: 16px;
+    }
     label[for=hamburger]{
         right: 40px;
     }
@@ -951,13 +954,16 @@ footer{
         right: 20px;
     }
     .menu_box li:last-child {
-        margin-right: 100px;
+        margin-right: 80px;
+    }
+    .menu_box li{
+        font-size: 15px;
+        margin-right: 20px;
     }
     /* aboutme */
     .content_t{
         font-size: 28px;
     }
-    /* aboutme */
     .content_b_r_t .pro{
         width: 220px;
         margin-right: 10px;    
@@ -1022,6 +1028,17 @@ footer{
     }
     .banner_left_b_l{
         width: 30px;
+    }
+    .menu_box li{
+        font-size: 13px;
+        margin-right: 10px;
+    }
+    .menu_box li:last-child{
+        margin-right: 55px;
+    }
+    label[for=hamburger]{
+        width: 19px;
+        height: 20px;
     }
     /* aboutme */
     .content_t{
