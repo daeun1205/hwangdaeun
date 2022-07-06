@@ -257,7 +257,6 @@ label[for=hamburger] span:nth-child(2){
     stroke-dashoffset: 209;
     transform: rotate(-90deg);
     transform-origin: center;
-    /* animation: htmlcss 2s linear forwards; */
 }
 .shape.active{
     animation: htmlcss 2s linear forwards;
@@ -265,7 +264,6 @@ label[for=hamburger] span:nth-child(2){
 .java_icon{
     stroke-dasharray: 331;
     stroke-dashoffset: 209;
-    /* animation: java 2s linear forwards; */
 }
 .java_icon.active{
     animation: java 2s linear forwards;
@@ -273,7 +271,6 @@ label[for=hamburger] span:nth-child(2){
 .js_icon{
     stroke-dasharray: 295;
     stroke-dashoffset: 209;
-    /* animation: js 2s linear forwards; */
 }
 .js_icon.active{
     animation: js 2s linear forwards;
@@ -281,7 +278,6 @@ label[for=hamburger] span:nth-child(2){
 .ps_icon,.figma_icon{
     stroke-dasharray: 210;
     stroke-dashoffset: 149;
-    /* animation: psfig 2s linear forwards; */
 }
 .ps_icon.active,.figma_icon.active{
     animation: psfig 2s linear forwards;
@@ -289,7 +285,6 @@ label[for=hamburger] span:nth-child(2){
 .ai_icon{
     stroke-dasharray: 190;
     stroke-dashoffset: 129;
-    /* animation: ai 2s linear forwards; */
 }
 .ai_icon.active{
     animation: ai 2s linear forwards;
@@ -297,7 +292,6 @@ label[for=hamburger] span:nth-child(2){
 .xd_icon{
     stroke-dasharray: 150;
     stroke-dashoffset: 49;
-    /* animation: xd 2s linear forwards; */
 }
 .xd_icon.active{
     animation: xd 2s linear forwards;
@@ -342,19 +336,16 @@ label[for=hamburger] span:nth-child(2){
 }
 @keyframes java{
     0%{
-        /* stroke-dashoffset: 331; */
         stroke-dasharray: 209;  
 
     }
     100%{
-        /* stroke-dashoffset: 0; */
         stroke-dasharray: 331;
 
     }
 }
 @keyframes js{
     0%{
-        /* stroke-dashoffset: 127; */
         stroke-dasharray: 209;
     }
     100%{
