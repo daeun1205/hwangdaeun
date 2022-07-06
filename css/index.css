@@ -58,25 +58,30 @@ label[for=hamburger] span:nth-child(2){
 .menu_box li:last-child{
     margin-right: 180px;
 }
+.menu_box li a{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: 5px;
+}
 .menu_box li a::after{
     display:block;
     content: '';
     border-bottom: solid 3px #1a1a1e;  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .menu_box li a:hover:after { 
     transform: scaleX(1); 
     transform-origin: 0% 50%;
 }
 .header{
-    /* display: flex;
-    justify-content: space-between;
-    padding-top: 40px; */
     height: 100px;
     font-size: 20px;
     font-weight: 600;
-    /* font-family: 'NanumSquareEB'; */
 }
 .name{
     position: fixed;
@@ -132,24 +137,21 @@ label[for=hamburger] span:nth-child(2){
 }
 .banner_right{
     display: flex;
-    /* flex-direction: column; */
     align-items: end;
     text-align: right;
 }
 .banner_title{
     margin-top: 20px;
 }
-
 /* 어바웃미 */
 .section1{
-    padding-top: 300px;
+    margin-top: 300px;
 }
 .about_me{
     display: flex;
     justify-content: space-between;
 }
 .number_title{
-    /* font-family: "NanumSquareB"; */
     font-size: 25px;
 }
 .content{
@@ -185,7 +187,6 @@ label[for=hamburger] span:nth-child(2){
 }
 .content_b_r_t dl dt,.skills{
     font-size: 30px;
-    /* height: 32px; */
     border-bottom: 1px solid #333;
     box-sizing: border-box;
     margin-bottom: 30px;
@@ -256,31 +257,49 @@ label[for=hamburger] span:nth-child(2){
     stroke-dashoffset: 209;
     transform: rotate(-90deg);
     transform-origin: center;
+    /* animation: htmlcss 2s linear forwards; */
+}
+.shape.active{
     animation: htmlcss 2s linear forwards;
 }
 .java_icon{
     stroke-dasharray: 331;
     stroke-dashoffset: 209;
+    /* animation: java 2s linear forwards; */
+}
+.java_icon.active{
     animation: java 2s linear forwards;
 }
 .js_icon{
     stroke-dasharray: 295;
     stroke-dashoffset: 209;
+    /* animation: js 2s linear forwards; */
+}
+.js_icon.active{
     animation: js 2s linear forwards;
 }
 .ps_icon,.figma_icon{
     stroke-dasharray: 210;
     stroke-dashoffset: 149;
+    /* animation: psfig 2s linear forwards; */
+}
+.ps_icon.active,.figma_icon.active{
     animation: psfig 2s linear forwards;
 }
 .ai_icon{
     stroke-dasharray: 190;
     stroke-dashoffset: 129;
+    /* animation: ai 2s linear forwards; */
+}
+.ai_icon.active{
     animation: ai 2s linear forwards;
 }
 .xd_icon{
     stroke-dasharray: 150;
     stroke-dashoffset: 49;
+    /* animation: xd 2s linear forwards; */
+}
+.xd_icon.active{
     animation: xd 2s linear forwards;
 }
 .text{
@@ -368,21 +387,17 @@ label[for=hamburger] span:nth-child(2){
 }
 /* 리뉴얼웹사이트 */
 .section2{
-    padding-top: 300px;
+    margin-top: 300px;
 }
 .renewal_title{
     display: flex;
-    /* justify-content: ; */
 }
 .first_grid,.second_grid{
-    font-family: "NanumSquareB";
     font-size: 22px;
     margin-left: 300px;
     line-height: 1;
 }
 .project{
-    /* display: flex;
-    justify-content: space-between; */
     margin-bottom: 400px;
 
     position: relative;
@@ -489,10 +504,6 @@ label[for=hamburger] span:nth-child(2){
 .box3{
     background-color: #E8C08F;
 }
-
-
-
-
 .project_r{
     display: block;
     width: 900px;
@@ -502,18 +513,10 @@ label[for=hamburger] span:nth-child(2){
     transform: translateY(-50%);
     z-index: 999;
     transition: 0.5s;
-    /* padding-left: 30px; */
 }
-
-
-
-
-
-
-
 /* UI/UX */
 .section3{
-    padding-top: 300px;
+    margin-top: 300px;
 }
 .uiux_title{
     display: flex;
@@ -538,23 +541,9 @@ label[for=hamburger] span:nth-child(2){
     width: 850px;
     height: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* contactme */
 .section4{
-    padding-top: 300px;
+    margin-top: 300px;
 }
 .contact_me{
     display: flex;
@@ -585,7 +574,6 @@ footer{
 .footer_title,.footer_social{
     font-size: 22px;
 }
-
 /* top_but */
 .top_but img {
     width: 60px;
@@ -606,10 +594,6 @@ footer{
     }
   }
 
-
-
-
-
 @media (max-width:1700px){
     .project_txt3_ti_con{
         font-size: 18px;
@@ -623,6 +607,7 @@ footer{
         top: 40px;
     }
 }
+
 @media (max-width:1600px){
     .banner .banner_title p{
         font-size: 120px;
@@ -634,6 +619,7 @@ footer{
         height: 530px;
     }
 }
+
 @media (max-width:1500px){
     .project_r{
         width: 700px;
@@ -644,14 +630,6 @@ footer{
         top: 80px;
     }
 }
-
-
-
-
-
-
-
-
 
 @media (max-width:1400px){
     /* 배너 */
@@ -723,18 +701,6 @@ footer{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width:1200px){
     /* 배너 */
     .banner{
@@ -795,7 +761,6 @@ footer{
         font-size: 97px;
     }
 }
-
 
 @media (max-width:1024px){
     .wrap{
@@ -909,9 +874,6 @@ footer{
         right: 30px;
     }
 }
-
-
-
 
 @media (max-width:750px){
     .wrap{
@@ -1030,7 +992,7 @@ footer{
         width: 30px;
     }
     .menu_box li{
-        font-size: 13px;
+        font-size: 12px;
         margin-right: 10px;
     }
     .menu_box li:last-child{
@@ -1039,6 +1001,9 @@ footer{
     label[for=hamburger]{
         width: 19px;
         height: 20px;
+    }
+    .first_grid{
+        margin-left: 100px;
     }
     /* aboutme */
     .content_t{
@@ -1094,7 +1059,7 @@ footer{
     }
     /* 푸터 */
     .sendmessage{
-        font-size: 38px;
+        font-size: 36px;
         letter-spacing: 0px;
     }
     /* 탑버튼 */
