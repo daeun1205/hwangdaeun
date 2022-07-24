@@ -436,7 +436,7 @@ label[for=hamburger] span:nth-child(2){
 }
 .project_txt3_ti_con{
     font-family: 'NanumSquareL';
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
     color: #4c4c4c;
     margin-top: 5px;
@@ -586,9 +586,6 @@ footer{
   }
 
 @media (max-width:1700px){
-    .project_txt3_ti_con{
-        font-size: 18px;
-    }
     .project_r{
         width: 800px;
     }
@@ -838,7 +835,7 @@ footer{
         font-size: 23px;
     }
     .project_txt3_ti_con{
-        font-size: 17px;
+        font-size: 16px;
     }
     .project_txt4, .project_txt5, .project_txt6{
         font-size: 17px;
