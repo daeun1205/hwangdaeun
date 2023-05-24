@@ -47,7 +47,7 @@ label[for=hamburger] span:nth-child(2){
 }
 .menu_box{
     display: flex;
-    justify-content: first baseline;
+    justify-content: end;
     transition: 0.5s;
 }
 .menu_box li{
